@@ -2,6 +2,7 @@
 import NextJS from './icons/NextJS.astro';
 import Tailwind from './icons/Tailwind.astro';
 import React from './icons/React.astro';
+import Typescript from './icons/Typescript.astro';
 const TAGS = {
     NEXT: {
         name: 'Next.js',
@@ -17,17 +18,30 @@ const TAGS = {
         name: 'React',
         class: 'bg-black text-white',
         icon: React,
+    },
+    TYPESCRIPT: {
+        name: 'Typescript',
+        class: 'bg-black text-white',
+        icon: Typescript,
     }
 
 }
 const PROJECTS = [
     {
         title: 'Hotel Management System',
-        description: 'Lorem ipsum',
+        description: '',
         link: '#',
         github: 'https://github.com/sofiamino78/hotel-management',
         image: '/projects/HotelProject.webp',
         tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.REACT]
+    },
+    {
+        title: 'Travel App',
+        description: '',
+        link: '#',
+        github: 'https://github.com/sofiamino78/travel-app',
+        image: '/projects/Travel-app.webp',
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT]
     },
 ]
 ---
@@ -47,7 +61,7 @@ const PROJECTS = [
                     </li>
                 ))}
             </ul>
-            <img class="rounded shadow-2xl shadow-white/12" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
+            <img class="rounded shadow-2xl shadow-white/12 mb-7" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
         </article>
     ))
 }
